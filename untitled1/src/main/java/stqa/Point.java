@@ -2,7 +2,7 @@ package stqa;
 
 public class Point{
 
-  public static double x1, y1, x2, y2;
+  public double x1, y1, x2, y2;
 
   public static void main (String[] args) {
     Point p1 = new Point();
