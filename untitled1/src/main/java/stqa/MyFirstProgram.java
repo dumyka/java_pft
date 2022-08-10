@@ -1,5 +1,8 @@
 package stqa;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 public class MyFirstProgram {
   public static void main(String[] args) {
     hello("world");
@@ -15,5 +18,6 @@ public class MyFirstProgram {
   public static void hello(String somebody){
 
     System.out.println("Hello, " + somebody + "!");
+
   }
 }
