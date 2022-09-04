@@ -5,11 +5,13 @@ import org.junit.*;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 public class ContactCreationTest {
   private WebDriver wd;
 
-  @Before
+  @BeforeMethod
   public void setUp() throws Exception {
     System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
     wd = new ChromeDriver();
@@ -24,7 +26,7 @@ public class ContactCreationTest {
 
     initContactCreation();
     fillContactCreation(
-        new ContactData("Golovanov", "89500005409", "Dmitriy.Golovanov@nedra.digital", "Dmitriy"));
+        new ContactData("Dmitriy", "Golovanov", "89500005409", "Dmitriy.Golovanov@nedra.digital"));
     returnToMainPage();
   }
 
@@ -60,7 +62,7 @@ public class ContactCreationTest {
     wd.findElement(By.xpath("//input[@value='Login']")).click();
   }
 
-  @After
+  @AfterMethod
   public void tearDown() throws Exception {
     wd.quit();
 
