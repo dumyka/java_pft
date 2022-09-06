@@ -1,5 +1,6 @@
-package addressbook;
+package addressbook.tests;
 
+import addressbook.model.ContactData;
 import java.time.Duration;
 import org.junit.*;
 
